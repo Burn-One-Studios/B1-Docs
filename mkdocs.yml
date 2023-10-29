@@ -1,0 +1,57 @@
+site_name: B1-Docs
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.path
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: orange
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: deep orange
+      accent: deep purple
+  font:
+    text: Source Code Pro
+    code: Roboto Mono
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Burn-One-Studios
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/Burn-One-Studios"  target="_blank" rel="noopener">Burn-One-Studios</a>
