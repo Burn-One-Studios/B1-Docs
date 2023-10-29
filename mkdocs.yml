@@ -1,6 +1,7 @@
 site_name: B1-Docs
 theme:
   name: material
+  logo: assets/logo.png
   features:
     - navigation.sections
     - navigation.path
