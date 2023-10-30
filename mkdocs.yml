@@ -1,9 +1,16 @@
 site_name: B1-Docs
+site_description: >-
+  B1-Docs is a documentation site for Burn-One-Studios projects.
+site_author: Burn-One-Studios
+site_url: https://docs.burnonestudios.com
+
+repo_name: Burn-One-Studios/B1-Docs
+repo_url: https://github.com/Burn-One-Studios/B1-Docs
 theme:
   name: material
   logo: assets/logo.png
   features:
-    - navigation.sections
+    - navigation.expand
     - navigation.path
     - toc.integrate
     - navigation.top
@@ -12,17 +19,18 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.tooltips
   language: en
   palette:
     - scheme: default
       toggle:
-        icon: material/toggle-switch-off-outline 
+        icon: fontawesome/solid/sun
         name: Switch to dark mode
       primary: orange
       accent: purple 
     - scheme: slate 
       toggle:
-        icon: material/toggle-switch
+        icon: fontawesome/solid/moon
         name: Switch to light mode    
       primary: deep orange
       accent: deep purple
@@ -34,6 +42,8 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/Burn-One-Studios
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/burnone
 
 
 markdown_extensions:
@@ -48,6 +58,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.mark
+  - abbr
+  - pymdownx.snippets
   - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
