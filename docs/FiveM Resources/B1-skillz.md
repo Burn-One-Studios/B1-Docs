@@ -33,9 +33,9 @@ exports["B1-skillz"]:UpdateSkill("Stamina", 2)  -- Adds 2% to Stamina.
 #### `CheckSkill(skill, val)`
 
 - **Purpose:** Checks if a skill meets or exceeds a certain value.
-- **Arguments:**
-   `skill` - `string` - The name of the skill to check.
-   `val` - `int` - The value to check against.
+- **Arguments:**  
+   `skill` - `string` - The name of the skill to check.  
+   `val` - `int` - The value to check against.  
 - **Usage:**
 ```lua
 exports["B1-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
