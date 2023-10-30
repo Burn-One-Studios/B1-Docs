@@ -10,15 +10,17 @@
    Import the accompanying SQL file into your server's database.
 
 4. **Server Configuration:**  
-   If you have added it to a folder that is already being ensured then you have completed the process otherwise, add `start B1-skillz` to your `server.cfg` file.
+   If you have added it to a folder that is already being ensured then you have completed the process otherwise, add `ensure B1-skillz` to your `server.cfg` file.
 
 !!! warning
-    Make sure you have properly followed step 2. If you do not, the resource will not work.
+    Make sure you have properly followed all steps in the [Installation Guide](#installation-guide) before reporting an issue.
 ---
 
 ### Functions
+!!! info
+    All exports are client side only.
 
-#### `UpdateSkill(skill, amount)`
+#### `UpdateSkill`
 
 - **Purpose:** Modifies a given skill by a specified amount.
 - **Arguments:**  
@@ -28,12 +30,13 @@
 ```lua
 exports["B1-skillz"]:UpdateSkill("Stamina", 2)  -- Adds 2% to Stamina.
 ```
-#### `CheckSkill(skill, val)`
+#### `CheckSkill`
 
 - **Purpose:** Checks if a skill meets or exceeds a certain value.
 - **Arguments:**  
    `skill` - `string` - The name of the skill to check.  
    `val` - `int` - The value to check against.  
+- **Returns:** `boolean` - Whether the skill meets or exceeds the given value.
 - **Usage:**
 ```lua
 exports["B1-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
@@ -44,25 +47,16 @@ exports["B1-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
     end
 end)
 ```
-**Returns:** `boolean`
 
 !!! info
     This function is asynchronous, so it requires a callback function to be passed in. The callback function will be called with a boolean value indicating whether the skill meets or exceeds the given value. This function is useful for checking if a player has a certain skill level before allowing them to perform an action.
 
-#### `GetCurrentSkill(skill)`
+#### `GetCurrentSkill`
 
 - **Purpose:** Retrieves the current value of a given skill.
 - **Arguments:**
    `skill` - `string` - The name of the skill to retrieve.
-- **Usage:**
-```lua
-CreateThread(function()
-    local shootingskill = exports["B1-skillz"]:GetCurrentSkill("Shooting")
-    ESX.DumpTable(shootingskill) -- Prints to server console.
-    print(shootingskill.Current)  -- Prints to client console.
-end)
-```
-**Returns:** `table`
+- **Returns:** `table`
 
 | Key          | Type    | Description                   |
 | ------------ | ------- | ----------------------------- |
@@ -71,10 +65,19 @@ end)
 | Stat         | string  | Name of the skill             |
 | icon         | string  | FontAwesome icon name         |
 
+- **Usage:**
+```lua
+CreateThread(function()
+    local shootingskill = exports["B1-skillz"]:GetCurrentSkill("Shooting")
+    ESX.DumpTable(shootingskill) -- Prints to server console.
+    print(shootingskill.Current)  -- Prints to client console.
+end)
+```
+
 
 ---
 
-##### Resource Preview
+### Resource Preview
 **Skills Menu:**
 
 ![Preview of skills menu](https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillmenuprev.png)
