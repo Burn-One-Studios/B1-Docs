@@ -29,7 +29,7 @@
 - **Usage:**
 ```lua
 exports["B1-skillz"]:UpdateSkill("Stamina", 2)  -- Adds 2% to Stamina.
-
+```
 #### `CheckSkill(skill, val)`
 
 - **Purpose:** Checks if a skill meets or exceeds a certain value.
