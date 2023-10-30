@@ -4,8 +4,6 @@ site_description: >-
 site_author: Burn-One-Studios
 site_url: https://docs.burnonestudios.com
 
-repo_name: Burn-One-Studios/B1-Docs
-repo_url: https://github.com/Burn-One-Studios/B1-Docs
 theme:
   name: material
   logo: assets/logo.png

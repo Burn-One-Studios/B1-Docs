@@ -1,6 +1,4 @@
-## B1-skillz Resource Guide
-
-### Installation Steps
+### Installation Guide
 
 1. **Download and Place the Resource:**  
    Download the `B1-skillz` resource and move it to your resource folder.
@@ -18,7 +16,7 @@
     Make sure you have properly followed step 2. If you do not, the resource will not work.
 ---
 
-### Function Documentation
+### Functions
 
 #### `UpdateSkill(skill, amount)`
 
@@ -46,6 +44,8 @@ exports["B1-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
     end
 end)
 ```
+**Returns:** `boolean`
+
 !!! info
     This function is asynchronous, so it requires a callback function to be passed in. The callback function will be called with a boolean value indicating whether the skill meets or exceeds the given value. This function is useful for checking if a player has a certain skill level before allowing them to perform an action.
 
@@ -62,6 +62,7 @@ CreateThread(function()
     print(shootingskill.Current)  -- Prints to client console.
 end)
 ```
+**Returns:** `table`
 
 | Key          | Type    | Description                   |
 | ------------ | ------- | ----------------------------- |
@@ -73,8 +74,7 @@ end)
 
 ---
 
-### Resource Preview
-
-#### **Skills Menu:**
+##### Resource Preview
+**Skills Menu:**
 
 ![Preview of skills menu](https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillmenuprev.png)
