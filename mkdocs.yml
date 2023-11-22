@@ -63,6 +63,16 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+# Page tree
+nav:
+  - Home: index.md
+  - FiveM Resources:
+    - B1-Skillz:
+      - FiveM-Resources/B1-skillz/Installation Guide.md
+      - UpdateSkill: FiveM-Resources/B1-skillz/UpdateSkill.md
+      - CheckSkill: FiveM-Resources/B1-skillz/CheckSkill.md
+      - GetCurrentSkill: FiveM-Resources/B1-skillz/GetCurrentSkill.md
+
 
 copyright: |
   &copy; 2023 <a href="https://github.com/Burn-One-Studios"  target="_blank" rel="noopener">Burn-One-Studios</a>
