@@ -1,5 +1,3 @@
-#### `CheckSkill`
-
 - **Purpose:** Checks if a skill meets or exceeds a certain value.
 - **Arguments:**  
    `skill` - `string` - The name of the skill to check.  

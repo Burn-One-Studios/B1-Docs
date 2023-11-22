@@ -1,5 +1,3 @@
-#### `GetCurrentSkill`
-
 - **Purpose:** Retrieves the current value of a given skill.
 - **Arguments:**
    `skill` - `string` - The name of the skill to retrieve.

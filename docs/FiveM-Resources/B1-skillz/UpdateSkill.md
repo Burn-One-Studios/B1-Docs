@@ -1,5 +1,3 @@
-#### `UpdateSkill`
-
 - **Purpose:** Modifies a given skill by a specified amount.
 - **Arguments:**  
    `skill` - `string` - The name of the skill to modify.  

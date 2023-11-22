@@ -1,5 +1,3 @@
-### Installation Guide
-
 1. **Download and Place the Resource:**  
    Download the `B1-skillz` resource and move it to your resource folder.
 
