@@ -48,6 +48,17 @@ extra:
       link: https://discord.gg/burnone
 
 
+plugins:
+    - search
+    - social:
+        enabled: !ENV CI
+        cards_layout_options:
+          background_color: "#ff6e42"
+          logo: "assets/card.png"
+          title: "Burn-One-Studios Documentation"
+          description: "Useful documentation for Burn-One-Studios projects."
+
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
