@@ -20,16 +20,20 @@ theme:
     - content.tooltips
   language: en
   palette:
-    - scheme: default
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: fontawesome/solid/sun
         name: Switch to dark mode
       primary: orange
       accent: purple 
-    - scheme: slate 
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: fontawesome/solid/moon
-        name: Switch to light mode    
+        name: Switch to light mode
       primary: deep orange
       accent: deep purple
   font:
@@ -69,10 +73,11 @@ nav:
   - FiveM Resources:
     - B1-Skillz:
       - FiveM-Resources/B1-skillz/Installation Guide.md
-      - UpdateSkill: FiveM-Resources/B1-skillz/UpdateSkill.md
-      - CheckSkill: FiveM-Resources/B1-skillz/CheckSkill.md
-      - GetCurrentSkill: FiveM-Resources/B1-skillz/GetCurrentSkill.md
+      - Client:
+        - UpdateSkill: FiveM-Resources/B1-skillz/Client/UpdateSkill.md
+        - CheckSkill: FiveM-Resources/B1-skillz/Client/CheckSkill.md
+        - GetCurrentSkill: FiveM-Resources/B1-skillz/Client/GetCurrentSkill.md
 
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/Burn-One-Studios"  target="_blank" rel="noopener">Burn-One-Studios</a>
+  &copy; 2024 <a href="https://github.com/Burn-One-Studios"  target="_blank" rel="noopener">Burn-One-Studios</a>
