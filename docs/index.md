@@ -29,5 +29,5 @@ A brief description of this project.
 
 ## Support & Community
 
-Got questions or need help? Join our [Discord Server](https://discord.gg/burnone) and ask in the `#support` fourm.
-[![Discord Banner 2](https://discordapp.com/api/guilds/913147651741057076/widget.png?style=banner2)](https://discord.gg/burnone)
+Got questions or need help? Join our [Discord Server](https://discord.gg/qc4Q898Q3x) and ask in the `#support` fourm.
+[![Discord Banner 2](https://discordapp.com/api/guilds/913147651741057076/widget.png?style=banner2)](https://discord.gg/qc4Q898Q3x)
