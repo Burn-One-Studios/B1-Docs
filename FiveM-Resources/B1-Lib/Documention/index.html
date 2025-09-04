@@ -1,0 +1,2823 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A small, easy-to-use FiveM library with normalized functions for QBCore and ESX.">
+      
+      
+        <meta name="author" content="Burn-One-Studios">
+      
+      
+        <link rel="canonical" href="https://docs.burnonestudios.com/FiveM-Resources/B1-Lib/Documention/">
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../../B1-skillz/Installation%20Guide/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>B1-lib (FiveM) - B1-Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Code Pro";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="B1-lib (FiveM) - B1-Docs" >
+      
+        <meta  property="og:description"  content="A small, easy-to-use FiveM library with normalized functions for QBCore and ESX." >
+      
+        <meta  property="og:image"  content="https://docs.burnonestudios.com/assets/images/social/FiveM-Resources/B1-Lib/Documention.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://docs.burnonestudios.com/FiveM-Resources/B1-Lib/Documention/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="B1-lib (FiveM) - B1-Docs" >
+      
+        <meta  name="twitter:description"  content="A small, easy-to-use FiveM library with normalized functions for QBCore and ESX." >
+      
+        <meta  name="twitter:image"  content="https://docs.burnonestudios.com/assets/images/social/FiveM-Resources/B1-Lib/Documention.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#b1-lib-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="B1-Docs" class="md-header__button md-logo" aria-label="B1-Docs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            B1-Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              B1-lib (FiveM)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M178.2-10.1c7.4-3.1 15.8-2.2 22.5 2.2l87.8 58.2 87.8-58.2c6.7-4.4 15.1-5.2 22.5-2.2S411.4-.5 413 7.3l20.9 103.2 103.2 20.9c7.8 1.6 14.4 7 17.4 14.3s2.2 15.8-2.2 22.5L494.1 256l58.2 87.8c4.4 6.7 5.2 15.1 2.2 22.5s-9.6 12.8-17.4 14.3l-103.3 20.8L413 504.7c-1.6 7.8-7 14.4-14.3 17.4s-15.8 2.2-22.5-2.2l-87.8-58.2-87.8 58.2c-6.7 4.4-15.1 5.2-22.5 2.2s-12.8-9.6-14.3-17.4L143 401.4 39.7 380.5c-7.8-1.6-14.4-7-17.4-14.3s-2.2-15.8 2.2-22.5L82.7 256l-58.2-87.8c-4.4-6.7-5.2-15.1-2.2-22.5s9.6-12.8 17.4-14.3L143 110.6 163.9 7.3c1.6-7.8 7-14.4 14.3-17.4M207.6 256a80.4 80.4 0 1 1 160.8 0 80.4 80.4 0 1 1-160.8 0m208.8 0a128.4 128.4 0 1 0-256.8 0 128.4 128.4 0 1 0 256.8 0"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256c68.8 0 131.3-27.2 177.3-71.4 7.3-7 9.4-17.9 5.3-27.1s-13.7-14.9-23.8-14.1c-4.9.4-9.8.6-14.8.6-101.6 0-184-82.4-184-184 0-72.1 41.5-134.6 102.1-164.8 9.1-4.5 14.3-14.3 13.1-24.4s-8.6-18.3-18.5-20.5C294.4 2.2 275.4 0 256 0"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="B1-Docs" class="md-nav__button md-logo" aria-label="B1-Docs" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    B1-Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FiveM Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            FiveM Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    B1-Lib
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            B1-Lib
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  
+  <span class="md-ellipsis">
+    B1-lib (FiveM)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  
+  <span class="md-ellipsis">
+    B1-lib (FiveM)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Quick Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Basic Usage Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logger-shared-client-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Logger (Shared: client &amp; server)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 Logger (Shared: client &amp; server)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Log Levels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Log Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utils-shared" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Utils (Shared)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Utils (Shared)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-server-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗄️ Database (Server only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Database (Server only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Queries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orm-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      ORM Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ORM Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#player-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      👤 Player Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👤 Player Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-side-server-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server-side (Server only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server-side (Server only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-side-client-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-side (Client only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client-side (Client only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#money-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Money Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vehicle-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚗 Vehicle Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚗 Vehicle Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#server-side-server-only_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server-side (Server only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Server-side (Server only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-side-client-only_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Client-side (Client only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Client-side (Client only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-spawning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vehicle Spawning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-functions-client-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 UI Functions (Client only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎨 UI Functions (Client only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supported-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Systems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notification-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notification Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-client-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server → Client UI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#progress-bar-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progress Bar Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skill-check-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skill Check Examples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-specific-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      System-Specific Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      API References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-functions-server-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎒 Inventory Functions (Server only)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎒 Inventory Functions (Server only)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functions_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ FAQ / Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ FAQ / Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Dependencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#framework-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Framework Detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Complete Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Complete Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-resource-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Resource Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-orm-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced ORM Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    B1-Skillz
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            B1-Skillz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../B1-skillz/Installation%20Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Client
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Client
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../B1-skillz/Client/UpdateSkill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UpdateSkill
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../B1-skillz/Client/CheckSkill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CheckSkill
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../B1-skillz/Client/GetCurrentSkill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GetCurrentSkill
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="b1-lib-documentation">🚀 B1-lib Documentation</h1>
+<blockquote>
+<p><strong>A small, easy-to-use FiveM library that provides normalized functions for QBCore and ESX frameworks.</strong></p>
+</blockquote>
+<p><a href="https://github.com/your-repo/b1-lib"><img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg" /></a>
+<a href="https://github.com/your-repo/b1-lib"><img alt="Framework" src="https://img.shields.io/badge/framework-QBCore%20%7C%20ESX-green.svg" /></a>
+<a href="https://github.com/your-repo/b1-lib"><img alt="License" src="https://img.shields.io/badge/license-MIT-yellow.svg" /></a></p>
+<p><a class="md-button" href="#-quick-start">Skip to Quick Start</a></p>
+<hr />
+<h2 id="installation">📦 Installation</h2>
+<ol>
+<li><strong>Download</strong> the <code>b1-lib</code> folder to <code>resources/[lib]/b1-lib/</code></li>
+<li><strong>Add</strong> <code>ensure b1-lib</code> to your <code>server.cfg</code></li>
+<li><strong>Optional dependencies:</strong> <code>oxmysql</code>, <code>ox_inventory</code>, <code>ox_lib</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">-- server.cfg</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nv">ensure</span><span class="w"> </span><span class="nv">b1</span><span class="o">-</span><span class="nv">lib</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nv">ensure</span><span class="w"> </span><span class="nv">oxmysql</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nv">ensure</span><span class="w"> </span><span class="nv">ox_inventory</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nv">ensure</span><span class="w"> </span><span class="nv">ox_lib</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Optional but recommended</p>
+<ul>
+<li><strong>oxmysql</strong>: enables the DB and ORM features</li>
+<li><strong>ox_inventory</strong>: enables inventory helpers</li>
+<li><strong>ox_lib</strong>: enables unified notifications / progress / skill checks</li>
+</ul>
+</div>
+<hr />
+<h2 id="quick-start">⚡ Quick Start</h2>
+<p>=== "Method 1 · Get the entire B1 object (Recommended)"</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">-- Get the complete B1 object</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">B1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">getB1Object</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">-- Use any B1 function</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello from b1-lib!&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Welcome to the server!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">progressBar</span><span class="p">(</span><span class="s1">&#39;Loading...&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+</code></pre></div>
+<p>=== "Method 2 · Individual exports"</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">-- Use specific exports</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello from b1-lib!&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Welcome to the server!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">progressBar</span><span class="p">(</span><span class="s1">&#39;Loading...&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+</code></pre></div>
+<p>=== "Method 3 · Mixed approach"</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">-- Get B1 object for most functions</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">B1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">getB1Object</span><span class="p">()</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">-- Use individual exports for specific cases</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">skillCheck</span><span class="p">(</span><span class="s1">&#39;hard&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Why Method 1?</p>
+<ul>
+<li>✅ Clean, readable code</li>
+<li>✅ Access to all B1 functions</li>
+<li>✅ Better performance (single export call)</li>
+<li>✅ IDE autocomplete support</li>
+</ul>
+</div>
+<hr />
+<h2 id="basic-usage-examples">🧩 Basic Usage Examples</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">-- Get B1 object (recommended approach)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">B1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">getB1Object</span><span class="p">()</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">-- Logging + notifications</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hello from b1-lib!&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Welcome to the server!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1">-- UI functions</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">progressBar</span><span class="p">(</span><span class="s1">&#39;Loading...&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nv">onFinish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">        </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Loading complete!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="kr">end</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="p">})</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">skillCheck</span><span class="p">(</span><span class="s1">&#39;easy&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="kr">if</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Skill check passed!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="kr">end</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="c1">-- Spawn a vehicle (client-side example below has an alt signature)</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="kd">local</span><span class="w"> </span><span class="nv">netId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">spawnVehicle</span><span class="p">(</span><span class="s1">&#39;adder&#39;</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">vehicle</span><span class="p">)</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vehicle spawned:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">vehicle</span><span class="p">)</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="kr">end</span><span class="p">)</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1">-- Simple database query (server-side only)</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="kd">local</span><span class="w"> </span><span class="nv">players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">db</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users WHERE job = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;police&#39;</span><span class="p">})</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="c1">-- ORM model (server-side only)</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="kd">local</span><span class="w"> </span><span class="nv">Users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">orm</span><span class="p">.</span><span class="nf">define</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="kd">local</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="nv">user</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;New Name&#39;</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="nv">user</span><span class="p">:</span><span class="nf">save</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h2 id="logger-shared-client-server">📝 Logger <em>(Shared: client &amp; server)</em></h2>
+<p>Colored, boxed output with traceback support and calling resource detection.</p>
+<h3 id="functions">Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.log(level, message, opts?)</code></td>
+<td><code>(string\|number, any, table?) -&gt; void</code></td>
+<td>Log a message with specified level</td>
+</tr>
+<tr>
+<td><code>B1.setLogLevel(level)</code></td>
+<td><code>(string) -&gt; void</code></td>
+<td>Set the minimum log level</td>
+</tr>
+<tr>
+<td><code>B1.getLogLevel()</code></td>
+<td><code>() -&gt; string</code></td>
+<td>Get current log level</td>
+</tr>
+</tbody>
+</table>
+<h3 id="log-levels">Log Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Numeric</th>
+<th>Color</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>debug</code></td>
+<td><code>1</code></td>
+<td>🔵 Blue</td>
+<td>Debug information</td>
+</tr>
+<tr>
+<td><code>info</code></td>
+<td><code>2</code></td>
+<td>🟢 Green</td>
+<td>General information</td>
+</tr>
+<tr>
+<td><code>warning</code></td>
+<td><code>3</code></td>
+<td>🟡 Yellow</td>
+<td>Warning messages</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td><code>4</code></td>
+<td>🔴 Red</td>
+<td>Error messages with traceback</td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">-- String levels</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;This is an info message&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;warning&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;This is a warning&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;This is an error&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1">-- Numeric levels (1=debug, 2=info, 3=warning, 4=error)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;This is also an info message&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">-- Table logging (automatically formatted)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nv">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;police&#39;</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="c1">-- With context</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Player joined&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">playerId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="c1">-- Error with automatic traceback</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Something went wrong!&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="c1">-- Log level management</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">setLogLevel</span><span class="p">(</span><span class="s1">&#39;debug&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">setLogLevel</span><span class="p">(</span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="kd">local</span><span class="w"> </span><span class="nv">currentLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getLogLevel</span><span class="p">()</span><span class="w"> </span><span class="c1">-- &#39;error&#39;</span>
+</code></pre></div>
+<p><strong>Output format</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>^3[b1-lib]^7^2[INFO]^7 [my-resource] Player joined | {&quot;playerId&quot;:123,&quot;name&quot;:&quot;John&quot;}
+</code></pre></div>
+<hr />
+<h2 id="utils-shared">🛠️ Utils <em>(Shared)</em></h2>
+<p>Common utilities for strings, numbers, and system detection.</p>
+<h3 id="functions_1">Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.randomStr(length?)</code></td>
+<td><code>(number?) -&gt; string</code></td>
+<td>Generate random string</td>
+<td><code>B1.randomStr(10)</code> → <code>"aB3xY9mK2p"</code></td>
+</tr>
+<tr>
+<td><code>B1.randomInt(length?)</code></td>
+<td><code>(number?) -&gt; number</code></td>
+<td>Generate random integer</td>
+<td><code>B1.randomInt(6)</code> → <code>123456</code></td>
+</tr>
+<tr>
+<td><code>B1.splitStr(str, delimiter?)</code></td>
+<td><code>(string, string?) -&gt; table</code></td>
+<td>Split string by delimiter</td>
+<td><code>B1.splitStr('a,b,c', ',')</code> → <code>{"a", "b", "c"}</code></td>
+</tr>
+<tr>
+<td><code>B1.sanitizeString(s, charset?)</code></td>
+<td><code>(string, string?) -&gt; string</code></td>
+<td>Keep only specified chars</td>
+<td><code>B1.sanitizeString('Hello!@#$')</code> → <code>"Hello"</code></td>
+</tr>
+<tr>
+<td><code>B1.removeChars(s, charset?)</code></td>
+<td><code>(string, string?) -&gt; string</code></td>
+<td>Remove specified chars</td>
+<td><code>B1.removeChars('Hello!@#$')</code> → <code>"Hello"</code></td>
+</tr>
+<tr>
+<td><code>B1.trim(s)</code></td>
+<td><code>(string) -&gt; string</code></td>
+<td>Remove whitespace</td>
+<td><code>B1.trim('  hello  ')</code> → <code>"hello"</code></td>
+</tr>
+<tr>
+<td><code>B1.firstToUpper(s)</code></td>
+<td><code>(string) -&gt; string</code></td>
+<td>Capitalize first letter</td>
+<td><code>B1.firstToUpper('hello')</code> → <code>"Hello"</code></td>
+</tr>
+<tr>
+<td><code>B1.round(num, decimals?)</code></td>
+<td><code>(number, number?) -&gt; number</code></td>
+<td>Round to decimals</td>
+<td><code>B1.round(3.14159, 2)</code> → <code>3.14</code></td>
+</tr>
+<tr>
+<td><code>B1.getCoreName()</code></td>
+<td><code>() -&gt; string\|nil</code></td>
+<td>Get framework name</td>
+<td><code>"qb-core"</code> or <code>"esx"</code></td>
+</tr>
+<tr>
+<td><code>B1.getInventoryName()</code></td>
+<td><code>() -&gt; string</code></td>
+<td>Get inventory system</td>
+<td><code>"ox"</code>, <code>"qb"</code>, or <code>"esx"</code></td>
+</tr>
+<tr>
+<td><code>B1.getCoreObject()</code></td>
+<td><code>() -&gt; table\|nil</code></td>
+<td>Get core object</td>
+<td>Core framework object</td>
+</tr>
+<tr>
+<td><code>B1.getNotificationSystem()</code></td>
+<td><code>() -&gt; string</code></td>
+<td>Get notification system</td>
+<td><code>"ox"</code>, <code>"zsx"</code>, <code>"qb"</code>, <code>"esx"</code>, or <code>"native"</code></td>
+</tr>
+<tr>
+<td><code>B1.getProgressBarSystem()</code></td>
+<td><code>() -&gt; string</code></td>
+<td>Get progress bar system</td>
+<td><code>"ox"</code>, <code>"zsx"</code>, <code>"qb"</code>, <code>"esx"</code>, or <code>"native"</code></td>
+</tr>
+<tr>
+<td><code>B1.getSkillCheckSystem()</code></td>
+<td><code>() -&gt; string</code></td>
+<td>Get skill check system</td>
+<td><code>"ox"</code>, <code>"zsx"</code>, <code>"qb"</code>, <code>"esx"</code>, or <code>"native"</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_1">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">-- Random generation</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">randomStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">randomStr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">-- &quot;aB3xY9mK2p&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">randomInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">randomInt</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="w">  </span><span class="c1">-- 123456</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">-- String manipulation</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kd">local</span><span class="w"> </span><span class="nv">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">splitStr</span><span class="p">(</span><span class="s1">&#39;apple,banana,cherry&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">-- Returns: {&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;}</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="kd">local</span><span class="w"> </span><span class="nv">clean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">sanitizeString</span><span class="p">(</span><span class="s1">&#39;Hello!@#$&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz &#39;</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1">-- Returns: &quot;Hello &quot;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="kd">local</span><span class="w"> </span><span class="nv">trimmed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">trim</span><span class="p">(</span><span class="s1">&#39;  hello world  &#39;</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1">-- Returns: &quot;hello world&quot;</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="kd">local</span><span class="w"> </span><span class="nv">capitalized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">firstToUpper</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1">-- Returns: &quot;Hello world&quot;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="c1">-- Number formatting</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="kd">local</span><span class="w"> </span><span class="nv">rounded</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">round</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="c1">-- Returns: 3.14</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="c1">-- Framework detection</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="kd">local</span><span class="w"> </span><span class="nv">coreName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getCoreName</span><span class="p">()</span><span class="w"> </span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="c1">-- Returns: &quot;qb-core&quot; or &quot;esx&quot; or nil</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="kd">local</span><span class="w"> </span><span class="nv">inventoryName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getInventoryName</span><span class="p">()</span><span class="w"> </span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="c1">-- Returns: &quot;ox&quot;, &quot;qb&quot;, &quot;esx&quot;, or &quot;unknown&quot;</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="kd">local</span><span class="w"> </span><span class="nv">coreObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getCoreObject</span><span class="p">()</span><span class="w"> </span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="c1">-- Returns: Core framework object or nil</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="c1">-- UI system detection</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="kd">local</span><span class="w"> </span><span class="nv">notificationSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getNotificationSystem</span><span class="p">()</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="c1">-- Returns: &quot;ox&quot;, &quot;zsx&quot;, &quot;qb&quot;, &quot;esx&quot;, or &quot;native&quot;</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>
+<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="kd">local</span><span class="w"> </span><span class="nv">progressBarSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getProgressBarSystem</span><span class="p">()</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a><span class="c1">-- Returns: &quot;ox&quot;, &quot;zsx&quot;, &quot;qb&quot;, &quot;esx&quot;, or &quot;native&quot;</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>
+<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="kd">local</span><span class="w"> </span><span class="nv">skillCheckSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getSkillCheckSystem</span><span class="p">()</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="c1">-- Returns: &quot;ox&quot;, &quot;zsx&quot;, &quot;qb&quot;, &quot;esx&quot;, or &quot;native&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="database-server-only">🗄️ Database <em>(Server only)</em></h2>
+<p>Lightweight ORM with oxmysql adapter. All functions are await-style and non-blocking.</p>
+<div class="admonition warning">
+<p class="admonition-title">Requires oxmysql</p>
+<p>Database functions will be disabled if oxmysql is not available.</p>
+</div>
+<h3 id="basic-queries">Basic Queries</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.db.query(sql, params?)</code></td>
+<td><code>(string, table?) -&gt; table</code></td>
+<td>Execute query, return rows</td>
+<td><code>B1.db.query('SELECT * FROM users')</code></td>
+</tr>
+<tr>
+<td><code>B1.db.single(sql, params?)</code></td>
+<td><code>(string, table?) -&gt; table\|nil</code></td>
+<td>Get single row</td>
+<td><code>B1.db.single('SELECT * FROM users WHERE id = ?', {1})</code></td>
+</tr>
+<tr>
+<td><code>B1.db.scalar(sql, params?)</code></td>
+<td><code>(string, table?) -&gt; any\|nil</code></td>
+<td>Get scalar value</td>
+<td><code>B1.db.scalar('SELECT COUNT(*) FROM users')</code></td>
+</tr>
+<tr>
+<td><code>B1.db.insert(sql, params?)</code></td>
+<td><code>(string, table?) -&gt; number</code></td>
+<td>Insert record, return ID</td>
+<td><code>B1.db.insert('INSERT INTO users (name) VALUES (?)', {'John'})</code></td>
+</tr>
+<tr>
+<td><code>B1.db.update(sql, params?)</code></td>
+<td><code>(string, table?) -&gt; number</code></td>
+<td>Update records, return affected</td>
+<td><code>B1.db.update('UPDATE users SET name = ? WHERE id = ?', {'Jane', 1})</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_2">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1">-- Query multiple rows</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">db</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users WHERE job = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;police&#39;</span><span class="p">})</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">-- Returns: {{id=1, name=&quot;John&quot;, job=&quot;police&quot;}, ...}</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">-- Get single row</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">local</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">db</span><span class="p">.</span><span class="nf">single</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM users WHERE id = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">})</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">-- Returns: {id=1, name=&quot;John&quot;, job=&quot;police&quot;} or nil</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1">-- Get scalar value</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="kd">local</span><span class="w"> </span><span class="nv">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">db</span><span class="p">.</span><span class="nf">scalar</span><span class="p">(</span><span class="s1">&#39;SELECT COUNT(*) FROM users&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="c1">-- Returns: 42</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="c1">-- Insert record</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="kd">local</span><span class="w"> </span><span class="nv">insertId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">db</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="s1">&#39;INSERT INTO users (name, job) VALUES (?, ?)&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;police&#39;</span><span class="p">})</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="c1">-- Returns: 123 (inserted ID)</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="c1">-- Update record</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="kd">local</span><span class="w"> </span><span class="nv">affected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">db</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="s1">&#39;UPDATE users SET job = ? WHERE id = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">})</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="c1">-- Returns: 1 (affected rows)</span>
+</code></pre></div>
+<h3 id="orm-models">ORM Models</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.orm.define(tableName, primaryKey?)</code></td>
+<td><code>(string, string?) -&gt; Model</code></td>
+<td>Create a new model</td>
+</tr>
+<tr>
+<td><code>Model:find(id)</code></td>
+<td><code>(any) -&gt; Row\|nil</code></td>
+<td>Find single record by ID</td>
+</tr>
+<tr>
+<td><code>Model:findAll(where?, params?)</code></td>
+<td><code>(string?, table?) -&gt; table</code></td>
+<td>Find all records with optional WHERE</td>
+</tr>
+<tr>
+<td><code>Model:insert(data)</code></td>
+<td><code>(table) -&gt; number</code></td>
+<td>Insert new record</td>
+</tr>
+<tr>
+<td><code>Model:update(id, data)</code></td>
+<td><code>(any, table) -&gt; boolean</code></td>
+<td>Update record by ID</td>
+</tr>
+<tr>
+<td><code>Model:delete(id)</code></td>
+<td><code>(any) -&gt; boolean</code></td>
+<td>Delete record by ID</td>
+</tr>
+<tr>
+<td><code>Row:save()</code></td>
+<td><code>() -&gt; boolean</code></td>
+<td>Save changes to database</td>
+</tr>
+<tr>
+<td><code>Row:delete()</code></td>
+<td><code>() -&gt; boolean</code></td>
+<td>Delete this record</td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_3">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">-- Define a model</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">Users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">orm</span><span class="p">.</span><span class="nf">define</span><span class="p">(</span><span class="s1">&#39;users&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1">-- Primary key defaults to &#39;id&#39; if not specified</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1">-- Find single record</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="kd">local</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="kr">if</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="nv">user</span><span class="p">.</span><span class="py">name</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Access fields directly</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="nv">user</span><span class="p">.</span><span class="py">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;New Name&#39;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="nv">user</span><span class="p">:</span><span class="nf">save</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Save changes</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="kr">end</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="c1">-- Find all records</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="kd">local</span><span class="w"> </span><span class="nv">allUsers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">findAll</span><span class="p">()</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="c1">-- Returns: {{id=1, name=&quot;John&quot;}, {id=2, name=&quot;Jane&quot;}}</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="c1">-- Find with WHERE clause</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="kd">local</span><span class="w"> </span><span class="nv">policeUsers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">findAll</span><span class="p">(</span><span class="s1">&#39;job = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;police&#39;</span><span class="p">})</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="c1">-- Returns: {{id=1, name=&quot;John&quot;, job=&quot;police&quot;}}</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="c1">-- Insert new record</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="kd">local</span><span class="w"> </span><span class="nv">newId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">insert</span><span class="p">({</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">    </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Jane&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">    </span><span class="nv">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;police&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">    </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="p">})</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="c1">-- Returns: 123 (inserted ID)</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a><span class="c1">-- Update record</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">update</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;admin&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">})</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="c1">-- Returns: true if successful</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a><span class="c1">-- Delete record</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">delete</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a><span class="c1">-- Returns: true if successful</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a><span class="c1">-- Row methods (on records returned by find/findAll)</span>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a><span class="kd">local</span><span class="w"> </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Users</span><span class="p">:</span><span class="nf">find</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a><span class="nv">user</span><span class="p">.</span><span class="py">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;admin&#39;</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="nv">user</span><span class="p">:</span><span class="nf">save</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Save changes to database</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a><span class="nv">user</span><span class="p">:</span><span class="nf">delete</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Delete this record from database</span>
+</code></pre></div>
+<hr />
+<h2 id="player-functions">👤 Player Functions</h2>
+<p>Normalized player management functions that work with both QBCore and ESX frameworks.</p>
+<h3 id="server-side-server-only">Server-side <em>(Server only)</em></h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.getCorePlayer(source)</code></td>
+<td><code>(number) -&gt; table\|nil</code></td>
+<td>Get core player object</td>
+<td><code>B1.getCorePlayer(1)</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerByIdentifier(identifier)</code></td>
+<td><code>(string) -&gt; table\|nil</code></td>
+<td>Get player by identifier</td>
+<td><code>B1.getPlayerByIdentifier('ABC123')</code></td>
+</tr>
+<tr>
+<td><code>B1.getOfflinePlayerByIdentifier(identifier)</code></td>
+<td><code>(string) -&gt; table\|nil</code></td>
+<td>Get offline player</td>
+<td><code>B1.getOfflinePlayerByIdentifier('ABC123')</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayers()</code></td>
+<td><code>() -&gt; table</code></td>
+<td>Get all online players</td>
+<td><code>B1.getPlayers()</code></td>
+</tr>
+<tr>
+<td><code>B1.addMoney(source, type, amount, reason?)</code></td>
+<td><code>(number, string, number, string?) -&gt; boolean</code></td>
+<td>Add money to player</td>
+<td><code>B1.addMoney(1, 'cash', 1000, 'Reward')</code></td>
+</tr>
+<tr>
+<td><code>B1.removeMoney(source, type, amount, reason?)</code></td>
+<td><code>(number, string, number, string?) -&gt; boolean</code></td>
+<td>Remove money from player</td>
+<td><code>B1.removeMoney(1, 'bank', 500, 'Purchase')</code></td>
+</tr>
+<tr>
+<td><code>B1.getMoney(source, type)</code></td>
+<td><code>(number, string) -&gt; number</code></td>
+<td>Get player money</td>
+<td><code>B1.getMoney(1, 'cash')</code></td>
+</tr>
+<tr>
+<td><code>B1.setMoney(source, type, amount)</code></td>
+<td><code>(number, string, number) -&gt; boolean</code></td>
+<td>Set player money</td>
+<td><code>B1.setMoney(1, 'bank', 5000)</code></td>
+</tr>
+<tr>
+<td><code>B1.getLicences(source)</code></td>
+<td><code>(number) -&gt; table</code></td>
+<td>Get all licenses</td>
+<td><code>B1.getLicences(1)</code></td>
+</tr>
+<tr>
+<td><code>B1.getLicence(source, type)</code></td>
+<td><code>(number, string) -&gt; boolean</code></td>
+<td>Check specific license</td>
+<td><code>B1.getLicence(1, 'driver')</code></td>
+</tr>
+<tr>
+<td><code>B1.addLicence(source, type)</code></td>
+<td><code>(number, string) -&gt; boolean</code></td>
+<td>Add license</td>
+<td><code>B1.addLicence(1, 'weapon')</code></td>
+</tr>
+<tr>
+<td><code>B1.removeLicence(source, type)</code></td>
+<td><code>(number, string) -&gt; boolean</code></td>
+<td>Remove license</td>
+<td><code>B1.removeLicence(1, 'driver')</code></td>
+</tr>
+<tr>
+<td><code>B1.getCitizenId(source)</code></td>
+<td><code>(number) -&gt; string\|nil</code></td>
+<td>Get citizen ID</td>
+<td><code>B1.getCitizenId(1)</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerName(source)</code></td>
+<td><code>(number) -&gt; string</code></td>
+<td>Get player name</td>
+<td><code>B1.getPlayerName(1)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_4">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1">-- Get core player object</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getCorePlayer</span><span class="p">(</span><span class="nv">source</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1">-- Returns: Core player object or nil</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1">-- Get player by identifier</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kd">local</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerByIdentifier</span><span class="p">(</span><span class="s1">&#39;ABC123&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1">-- Returns: Player object or nil</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1">-- Get offline player</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="kd">local</span><span class="w"> </span><span class="nv">offlinePlayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getOfflinePlayerByIdentifier</span><span class="p">(</span><span class="s1">&#39;ABC123&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="c1">-- Returns: Offline player data or nil</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1">-- Get all players</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="kd">local</span><span class="w"> </span><span class="nv">players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayers</span><span class="p">()</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c1">-- Returns: {{source=1, name=&quot;John&quot;}, {source=2, name=&quot;Jane&quot;}}</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="c1">-- Money management</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">addMoney</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cash&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Reward&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">removeMoney</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bank&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Purchase&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="kd">local</span><span class="w"> </span><span class="nv">cash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getMoney</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;cash&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">setMoney</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bank&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="c1">-- License management</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="kd">local</span><span class="w"> </span><span class="nv">licenses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getLicences</span><span class="p">(</span><span class="nv">source</span><span class="p">)</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="c1">-- Returns: {driver=true, weapon=false, ...}</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="kd">local</span><span class="w"> </span><span class="nv">hasLicense</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getLicence</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;driver&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="c1">-- Returns: true or false</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">addLicence</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;weapon&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">removeLicence</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;driver&#39;</span><span class="p">)</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a><span class="c1">-- Identity</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a><span class="kd">local</span><span class="w"> </span><span class="nv">citizenId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getCitizenId</span><span class="p">(</span><span class="nv">source</span><span class="p">)</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a><span class="c1">-- Returns: &quot;ABC123&quot; or nil</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a><span class="kd">local</span><span class="w"> </span><span class="nv">playerName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerName</span><span class="p">(</span><span class="nv">source</span><span class="p">)</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a><span class="c1">-- Returns: &quot;John Doe&quot; or &quot;Unknown&quot;</span>
+</code></pre></div>
+<h3 id="client-side-client-only">Client-side <em>(Client only)</em></h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.getCorePlayerData()</code></td>
+<td><code>() -&gt; table\|nil</code></td>
+<td>Get core player data</td>
+<td><code>B1.getCorePlayerData()</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerData()</code></td>
+<td><code>() -&gt; table\|nil</code></td>
+<td>Get normalized player data</td>
+<td><code>B1.getPlayerData()</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerJob()</code></td>
+<td><code>() -&gt; table\|nil</code></td>
+<td>Get player job info</td>
+<td><code>B1.getPlayerJob()</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerGang()</code></td>
+<td><code>() -&gt; table\|nil</code></td>
+<td>Get player gang info</td>
+<td><code>B1.getPlayerGang()</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerMoney(type)</code></td>
+<td><code>(string) -&gt; number</code></td>
+<td>Get player money</td>
+<td><code>B1.getPlayerMoney('cash')</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlayerName()</code></td>
+<td><code>() -&gt; string</code></td>
+<td>Get player name</td>
+<td><code>B1.getPlayerName()</code></td>
+</tr>
+<tr>
+<td><code>B1.getCitizenId()</code></td>
+<td><code>() -&gt; string\|nil</code></td>
+<td>Get citizen ID (callback)</td>
+<td><code>B1.getCitizenId()</code></td>
+</tr>
+<tr>
+<td><code>B1.notify(message, type?, length?)</code></td>
+<td><code>(string, string?, number?) -&gt; void</code></td>
+<td>Show notification</td>
+<td><code>B1.notify('Hello!', 'success')</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_5">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">-- Get player data</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">playerData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerData</span><span class="p">()</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1">-- Returns: {</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="c1">--   identifier = &quot;ABC123&quot;,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="c1">--   job = {name=&quot;police&quot;, label=&quot;Police&quot;, grade=1, isboss=false, onduty=true},</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="c1">--   money = {cash=1000, bank=5000},</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="c1">--   bank = 5000,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="c1">--   metadata = {...},</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="c1">--   charinfo = {firstname=&quot;John&quot;, lastname=&quot;Doe&quot;}</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="c1">-- }</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="c1">-- Get specific data</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="kd">local</span><span class="w"> </span><span class="nv">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerJob</span><span class="p">()</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="c1">-- Returns: {name=&quot;police&quot;, label=&quot;Police&quot;, grade=1, isboss=false, onduty=true}</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="kd">local</span><span class="w"> </span><span class="nv">gang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerGang</span><span class="p">()</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="c1">-- Returns: QB gang data or ESX job data</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="kd">local</span><span class="w"> </span><span class="nv">cash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerMoney</span><span class="p">(</span><span class="s1">&#39;cash&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="c1">-- Returns: 1000</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="kd">local</span><span class="w"> </span><span class="nv">bank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerMoney</span><span class="p">(</span><span class="s1">&#39;bank&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="c1">-- Returns: 5000</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="kd">local</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerName</span><span class="p">()</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="c1">-- Returns: &quot;John Doe&quot;</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="kd">local</span><span class="w"> </span><span class="nv">citizenId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getCitizenId</span><span class="p">()</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a><span class="c1">-- Returns: &quot;ABC123&quot; (via server callback)</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a><span class="c1">-- Notifications</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Warning message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Error occurred&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="money-types">Money Types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>QBCore</th>
+<th>ESX</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cash</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Cash money</td>
+</tr>
+<tr>
+<td><code>bank</code></td>
+<td>✅</td>
+<td>✅</td>
+<td>Bank account</td>
+</tr>
+<tr>
+<td><code>black</code></td>
+<td>❌</td>
+<td>✅</td>
+<td>Black money (ESX only)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vehicle-functions">🚗 Vehicle Functions</h2>
+<p>Vehicle management functions for spawning, plate detection, and label retrieval.</p>
+<h3 id="server-side-server-only_1">Server-side <em>(Server only)</em></h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.spawnVehicle(source, model, coords?, warp?)</code></td>
+<td><code>(number, string, vector4?, boolean?) -&gt; number\|nil</code></td>
+<td>Spawn vehicle for player</td>
+<td><code>B1.spawnVehicle(1, 'adder', vector4(0,0,0,0), true)</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlate(netId)</code></td>
+<td><code>(number) -&gt; string\|nil</code></td>
+<td>Get vehicle plate</td>
+<td><code>B1.getPlate(123)</code></td>
+</tr>
+<tr>
+<td><code>B1.getVehicleLabel(model)</code></td>
+<td><code>(string) -&gt; string</code></td>
+<td>Get vehicle display name</td>
+<td><code>B1.getVehicleLabel('adder')</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_6">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">-- Spawn vehicle for player</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">netId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">spawnVehicle</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;adder&#39;</span><span class="p">,</span><span class="w"> </span><span class="nf">vector4</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1">-- Returns: 123 (network ID) or nil</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">-- Get vehicle plate</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="kd">local</span><span class="w"> </span><span class="nv">plate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlate</span><span class="p">(</span><span class="nv">netId</span><span class="p">)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1">-- Returns: &quot;ABC123&quot; or nil</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1">-- Get vehicle label</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="kd">local</span><span class="w"> </span><span class="nv">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getVehicleLabel</span><span class="p">(</span><span class="s1">&#39;adder&#39;</span><span class="p">)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="c1">-- Returns: &quot;Truffade Adder&quot; or &quot;adder&quot;</span>
+</code></pre></div>
+<h3 id="client-side-client-only_1">Client-side <em>(Client only)</em></h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.spawnVehicle(model, cb?, coords?, isnetworked?, teleportInto?)</code></td>
+<td><code>(string, function?, vector4?, boolean?, boolean?) -&gt; number\|nil</code></td>
+<td>Spawn vehicle</td>
+<td><code>B1.spawnVehicle('adder', function(id) end)</code></td>
+</tr>
+<tr>
+<td><code>B1.getPlate(vehicle)</code></td>
+<td><code>(number\|entity) -&gt; string\|nil</code></td>
+<td>Get vehicle plate</td>
+<td><code>B1.getPlate(vehicle)</code></td>
+</tr>
+<tr>
+<td><code>B1.getVehicleLabel(model)</code></td>
+<td><code>(string) -&gt; string</code></td>
+<td>Get vehicle label (callback)</td>
+<td><code>B1.getVehicleLabel('adder')</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_7">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">-- Spawn vehicle</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">netId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">spawnVehicle</span><span class="p">(</span><span class="s1">&#39;adder&#39;</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">vehicle</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">    </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vehicle spawned:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">vehicle</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="kr">end</span><span class="p">,</span><span class="w"> </span><span class="nf">vector4</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1">-- Returns: 123 (network ID) or nil</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1">-- Get vehicle plate</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="kd">local</span><span class="w"> </span><span class="nv">plate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlate</span><span class="p">(</span><span class="nv">vehicle</span><span class="p">)</span><span class="w"> </span><span class="c1">-- or netId</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="c1">-- Returns: &quot;ABC123&quot; or nil</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="c1">-- Get vehicle label</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="kd">local</span><span class="w"> </span><span class="nv">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getVehicleLabel</span><span class="p">(</span><span class="s1">&#39;adder&#39;</span><span class="p">)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1">-- Returns: &quot;Truffade Adder&quot; (via server callback)</span>
+</code></pre></div>
+<h3 id="vehicle-spawning">Vehicle Spawning</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model</code></td>
+<td><code>string</code></td>
+<td>-</td>
+<td>Vehicle model name (e.g., 'adder', 'zentorno')</td>
+</tr>
+<tr>
+<td><code>coords</code></td>
+<td><code>vector4</code></td>
+<td><code>Config.Vehicle.DefaultSpawn</code></td>
+<td>Spawn coordinates (x, y, z, heading)</td>
+</tr>
+<tr>
+<td><code>warp</code>/<code>teleportInto</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Whether to teleport player into vehicle</td>
+</tr>
+<tr>
+<td><code>isnetworked</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Whether vehicle should be networked</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ui-functions-client-only">🎨 UI Functions <em>(Client only)</em></h2>
+<p>Client-side UI functions for notifications, progress bars, and skill checks across different systems.</p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>UI functions are client-side only as they require player interaction. To send UI elements from server to client, use <code>B1.notifyServer()</code> or <code>TriggerClientEvent</code> with the appropriate client-side function.</p>
+</div>
+<h3 id="supported-systems">Supported Systems</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Notifications</th>
+<th>Progress Bars</th>
+<th>Skill Checks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ox_lib</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>ZSX_UI</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>QBCore</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>ESX</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>Native</strong></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>ZSX_UI ProgressBar now fully supported with correct API</li>
+<li>QBCore and ESX don't have built-in skill check systems - fall back to ox_lib if available</li>
+<li>ZSX_UI notifications use <code>exports['ZSX_UIV2']:Notification()</code> with serial return for removal</li>
+</ul>
+</div>
+<h3 id="functions_2">Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.notify(message, type?, duration?, position?)</code></td>
+<td><code>(string, string?, number?, string?) -&gt; any</code></td>
+<td>Show notification</td>
+<td><code>B1.notify('Hello!', 'success', 5000, 'top-right')</code></td>
+</tr>
+<tr>
+<td><code>B1.progressBar(label, duration?, options?)</code></td>
+<td><code>(string, number?, table?) -&gt; boolean</code></td>
+<td>Show progress bar</td>
+<td><code>B1.progressBar('Loading...', 10000, {onFinish=function() end})</code></td>
+</tr>
+<tr>
+<td><code>B1.skillCheck(difficulty?, options?)</code></td>
+<td><code>(string?, table?) -&gt; boolean</code></td>
+<td>Show skill check</td>
+<td><code>B1.skillCheck('easy', {duration=5000})</code></td>
+</tr>
+<tr>
+<td><code>B1.removeNotification(serial)</code></td>
+<td><code>(any) -&gt; void</code></td>
+<td>Remove notification (ZSX_UI only)</td>
+<td><code>B1.removeNotification(serial)</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="notification-examples">Notification Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1">-- Basic notification (client-side only)</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1">-- Custom duration and position</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Warning message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;warning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3000</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bottom-left&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1">-- Different types</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Info message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Success message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Warning message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Error message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1">-- ZSX_UI specific (returns serial for removal)</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="kd">local</span><span class="w"> </span><span class="nv">serial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Permanent notification&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="c1">-- Remove notification later</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">removeNotification</span><span class="p">(</span><span class="nv">serial</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="server-client-ui">Server → Client UI</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1">-- Server-side: Send notification to specific player</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Server notification&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="c1">-- Server-side: Send notification to all players</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Global notification&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3000</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="c1">-- Server-side: Using different notification types</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Success message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Error message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Warning message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;warning&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Info message&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="c1">-- Server-side: Using numeric types</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Numeric success&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span><span class="w"> </span><span class="c1">-- 2 = success</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">notifyServer</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Numeric error&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">)</span><span class="w">   </span><span class="c1">-- 3 = error</span>
+</code></pre></div>
+<h4 id="progress-bar-examples">Progress Bar Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">-- Basic progress bar</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">progressBar</span><span class="p">(</span><span class="s1">&#39;Loading...&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10000</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1">-- With callbacks</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">progressBar</span><span class="p">(</span><span class="s1">&#39;Processing...&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="nv">onFinish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">        </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Process completed!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">    </span><span class="kr">end</span><span class="p">,</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="nv">onCancel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kr">function</span><span class="p">()</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">        </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Process cancelled&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;warning&#39;</span><span class="p">)</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">    </span><span class="kr">end</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="p">})</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="c1">-- With animation</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="nv">B1</span><span class="p">.</span><span class="nf">progressBar</span><span class="p">(</span><span class="s1">&#39;Repairing vehicle...&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15000</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">    </span><span class="nv">anim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">        </span><span class="nv">dict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;mini@repair&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="w">        </span><span class="nv">clip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;fixing_a_ped&#39;</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">    </span><span class="nv">prop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a><span class="w">        </span><span class="nv">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;prop_tool_wrench&#39;</span><span class="p">,</span>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">        </span><span class="nv">bone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">57005</span><span class="p">,</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">        </span><span class="nv">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vector3</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a><span class="w">        </span><span class="nv">rot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vector3</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">    </span><span class="nv">disable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">        </span><span class="nv">car</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">        </span><span class="nv">move</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a><span class="w">        </span><span class="nv">combat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">        </span><span class="nv">mouse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="p">})</span>
+</code></pre></div>
+<h4 id="skill-check-examples">Skill Check Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">-- Basic skill check</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">skillCheck</span><span class="p">(</span><span class="s1">&#39;easy&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1">-- With custom options</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">skillCheck</span><span class="p">(</span><span class="s1">&#39;hard&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w">    </span><span class="nv">duration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="nv">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="nv">disable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">        </span><span class="nv">car</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">        </span><span class="nv">move</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">        </span><span class="nv">combat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="w">        </span><span class="nv">mouse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="p">})</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="c1">-- Handle result</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="kr">if</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">    </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Skill check passed!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="kr">else</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">    </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Skill check failed!&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="kr">end</span>
+</code></pre></div>
+<h4 id="system-detection">System Detection</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">-- Get current systems</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kd">local</span><span class="w"> </span><span class="nv">notificationSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getNotificationSystem</span><span class="p">()</span><span class="w"> </span><span class="c1">-- &#39;ox&#39;, &#39;zsx&#39;, &#39;qb&#39;, &#39;esx&#39;, &#39;native&#39;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">progressBarSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getProgressBarSystem</span><span class="p">()</span><span class="w">   </span><span class="c1">-- &#39;ox&#39;, &#39;zsx&#39;, &#39;qb&#39;, &#39;esx&#39;, &#39;native&#39;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="kd">local</span><span class="w"> </span><span class="nv">skillCheckSystem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getSkillCheckSystem</span><span class="p">()</span><span class="w">     </span><span class="c1">-- &#39;ox&#39;, &#39;zsx&#39;, &#39;qb&#39;, &#39;esx&#39;, &#39;native&#39;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="c1">-- Check if specific system is available</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="kr">if</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getNotificationSystem</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;ox&#39;</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Using ox_lib notifications&#39;</span><span class="p">)</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="kr">end</span>
+</code></pre></div>
+<h4 id="system-specific-features">System-Specific Features</h4>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Notifications</th>
+<th>Progress Bars</th>
+<th>Skill Checks</th>
+<th>Special Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ox_lib</strong></td>
+<td><code>exports.ox_lib:notify()</code></td>
+<td><code>exports.ox_lib:progressBar()</code></td>
+<td><code>exports.ox_lib:skillCheck()</code></td>
+<td>Full feature support</td>
+</tr>
+<tr>
+<td><strong>ZSX_UI</strong></td>
+<td><code>exports['ZSX_UIV2']:Notification()</code></td>
+<td><code>exports['ZSX_UIV2']:ProgressBar()</code></td>
+<td>❌</td>
+<td>Notification removal with serial</td>
+</tr>
+<tr>
+<td><strong>QBCore</strong></td>
+<td><code>QBCore.Functions.Notify()</code></td>
+<td><code>QBCore.Functions.Progressbar()</code></td>
+<td>❌</td>
+<td>Framework integration</td>
+</tr>
+<tr>
+<td><strong>ESX</strong></td>
+<td><code>ESX.ShowNotification()</code></td>
+<td><code>ESX.Progressbar()</code></td>
+<td>❌</td>
+<td>Framework integration</td>
+</tr>
+<tr>
+<td><strong>Native</strong></td>
+<td><code>DrawNotification()</code></td>
+<td>❌</td>
+<td>❌</td>
+<td>Basic fallback</td>
+</tr>
+</tbody>
+</table>
+<h4 id="api-references">API References</h4>
+<ul>
+<li><strong>ZSX_UI</strong>: <a href="https://zsx-development.gitbook.io/docs/user-interface-v2/exports/interfaces/notifications">Notifications</a> | <a href="https://zsx-development.gitbook.io/docs/user-interface-v2/exports/interfaces/progress-bar">ProgressBar</a></li>
+<li><strong>QBCore</strong>: <a href="https://docs.qbcore.org/qbcore-documentation/qb-core/client-function-reference#qbcore.functions.progressbar">ProgressBar</a></li>
+<li><strong>ESX</strong>: <a href="https://docs.esx-framework.org/en/esx_core/esx_progressbar">ProgressBar</a></li>
+</ul>
+<hr />
+<h2 id="inventory-functions-server-only">🎒 Inventory Functions <em>(Server only)</em></h2>
+<p>Server-side inventory management with ox_inventory integration.</p>
+<div class="admonition warning">
+<p class="admonition-title">Requires ox_inventory</p>
+<p>Inventory functions will be disabled if ox_inventory is not available.</p>
+</div>
+<h3 id="functions_3">Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>B1.inv.add(src, name, count?, metadata?, slot?)</code></td>
+<td><code>(number, string, number?, table?, number?) -&gt; boolean</code></td>
+<td>Add item to inventory</td>
+<td><code>B1.inv.add(1, 'bread', 5, {quality=100})</code></td>
+</tr>
+<tr>
+<td><code>B1.inv.remove(src, name, count?, metadata?, slot?)</code></td>
+<td><code>(number, string, number?, table?, number?) -&gt; boolean</code></td>
+<td>Remove item from inventory</td>
+<td><code>B1.inv.remove(1, 'bread', 2)</code></td>
+</tr>
+<tr>
+<td><code>B1.inv.canCarry(src, name, count?, metadata?)</code></td>
+<td><code>(number, string, number?, table?) -&gt; boolean</code></td>
+<td>Check if player can carry</td>
+<td><code>B1.inv.canCarry(1, 'bread', 10)</code></td>
+</tr>
+<tr>
+<td><code>B1.inv.get(src, name, metadata?)</code></td>
+<td><code>(number, string, table?) -&gt; table\|nil</code></td>
+<td>Get item from inventory</td>
+<td><code>B1.inv.get(1, 'bread')</code></td>
+</tr>
+<tr>
+<td><code>B1.inv.search(src, searchType, items, metadata?)</code></td>
+<td><code>(number, string, table, table?) -&gt; table</code></td>
+<td>Search inventory</td>
+<td><code>B1.inv.search(1, 'slots', {'bread', 'water'})</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples_8">Examples</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">-- Add item</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nv">B1</span><span class="p">.</span><span class="py">inv</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bread&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">quality</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">})</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c1">-- Returns: true if successful</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="c1">-- Remove item</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="nv">B1</span><span class="p">.</span><span class="py">inv</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bread&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c1">-- Returns: true if successful</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c1">-- Check if player can carry</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="kd">local</span><span class="w"> </span><span class="nv">canCarry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">inv</span><span class="p">.</span><span class="nf">canCarry</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bread&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="c1">-- Returns: true or false</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="c1">-- Get item</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="kd">local</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">inv</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bread&#39;</span><span class="p">)</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="c1">-- Returns: {name=&quot;bread&quot;, count=5, metadata={...}} or nil</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="c1">-- Search inventory</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="kd">local</span><span class="w"> </span><span class="nv">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">inv</span><span class="p">.</span><span class="nf">search</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;slots&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s1">&#39;bread&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;water&#39;</span><span class="p">})</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="c1">-- Returns: {{name=&quot;bread&quot;, count=5}, {name=&quot;water&quot;, count=2}}</span>
+</code></pre></div>
+<hr />
+<h2 id="configuration">⚙️ Configuration</h2>
+<p>Edit <code>config.lua</code> to customize behavior:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1">-- B1-lib Configuration</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="c1">-- Core framework detection</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="nv">Config</span><span class="p">.</span><span class="py">Core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;auto&#39;</span><span class="w"> </span><span class="c1">-- &#39;auto&#39;|&#39;qb-core&#39;|&#39;esx&#39;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="c1">-- Notification system</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="nv">Config</span><span class="p">.</span><span class="py">Notification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;auto&#39;</span><span class="w"> </span><span class="c1">-- &#39;auto&#39;|&#39;ox&#39;|&#39;zsx&#39;|&#39;esx&#39;|&#39;qb&#39;|&#39;native&#39;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="c1">-- Progress bar system</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="nv">Config</span><span class="p">.</span><span class="py">ProgressBar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;auto&#39;</span><span class="w"> </span><span class="c1">-- &#39;auto&#39;|&#39;ox&#39;|&#39;zsx&#39;|&#39;esx&#39;|&#39;qb&#39;|&#39;native&#39;</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="c1">-- Skill check system</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="nv">Config</span><span class="p">.</span><span class="py">SkillCheck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;auto&#39;</span><span class="w"> </span><span class="c1">-- &#39;auto&#39;|&#39;ox&#39;|&#39;zsx&#39;|&#39;esx&#39;|&#39;qb&#39;|&#39;native&#39;</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="c1">-- Logging</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="nv">Config</span><span class="p">.</span><span class="py">LogTag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;^3[b1-lib]^7&#39;</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="nv">Config</span><span class="p">.</span><span class="py">LogLevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="w"> </span><span class="c1">-- &#39;debug&#39;|&#39;info&#39;|&#39;warning&#39;|&#39;error&#39;</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a><span class="c1">-- Vehicle defaults</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="nv">Config</span><span class="p">.</span><span class="py">VehicleDefaultSpawn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">vector4</span><span class="p">(</span><span class="o">-</span><span class="mf">42.4</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1098.3</span><span class="p">,</span><span class="w"> </span><span class="mf">26.4</span><span class="p">,</span><span class="w"> </span><span class="mf">70.0</span><span class="p">)</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="c1">-- Notification settings</span>
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="nv">Config</span><span class="p">.</span><span class="py">NotificationDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="c1">-- Default notification duration in ms</span>
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="nv">Config</span><span class="p">.</span><span class="py">NotificationPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;top-right&#39;</span><span class="w"> </span><span class="c1">-- &#39;top-left&#39;|&#39;top-right&#39;|&#39;bottom-left&#39;|&#39;bottom-right&#39;|&#39;center&#39;</span>
+<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a>
+<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a><span class="c1">-- Progress bar settings</span>
+<a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a><span class="nv">Config</span><span class="p">.</span><span class="py">ProgressBarDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span><span class="w"> </span><span class="c1">-- Default progress bar duration in ms</span>
+<a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a><span class="nv">Config</span><span class="p">.</span><span class="py">ProgressBarPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;bottom&#39;</span><span class="w"> </span><span class="c1">-- &#39;top&#39;|&#39;bottom&#39;|&#39;center&#39;</span>
+<a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a>
+<a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a><span class="c1">-- Skill check settings</span>
+<a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a><span class="nv">Config</span><span class="p">.</span><span class="py">SkillCheckDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5000</span><span class="w"> </span><span class="c1">-- Default skill check duration in ms</span>
+<a id="__codelineno-20-31" name="__codelineno-20-31" href="#__codelineno-20-31"></a><span class="nv">Config</span><span class="p">.</span><span class="py">SkillCheckDifficulty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;easy&#39;</span><span class="w"> </span><span class="c1">-- &#39;easy&#39;|&#39;medium&#39;|&#39;hard&#39;</span>
+</code></pre></div>
+<h4 id="configuration-options">Configuration Options</h4>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Config.Core</code></td>
+<td><code>string</code></td>
+<td><code>'auto'</code></td>
+<td>Framework detection mode</td>
+</tr>
+<tr>
+<td><code>Config.Notification</code></td>
+<td><code>string</code></td>
+<td><code>'auto'</code></td>
+<td>Notification system</td>
+</tr>
+<tr>
+<td><code>Config.ProgressBar</code></td>
+<td><code>string</code></td>
+<td><code>'auto'</code></td>
+<td>Progress bar system</td>
+</tr>
+<tr>
+<td><code>Config.SkillCheck</code></td>
+<td><code>string</code></td>
+<td><code>'auto'</code></td>
+<td>Skill check system</td>
+</tr>
+<tr>
+<td><code>Config.LogTag</code></td>
+<td><code>string</code></td>
+<td><code>'^3[b1-lib]^7'</code></td>
+<td>Log message prefix</td>
+</tr>
+<tr>
+<td><code>Config.LogLevel</code></td>
+<td><code>string</code></td>
+<td><code>'info'</code></td>
+<td>Minimum log level</td>
+</tr>
+<tr>
+<td><code>Config.VehicleDefaultSpawn</code></td>
+<td><code>vector4</code></td>
+<td><code>vector4(-42.4, -1098.3, 26.4, 70.0)</code></td>
+<td>Default vehicle spawn location</td>
+</tr>
+<tr>
+<td><code>Config.NotificationDuration</code></td>
+<td><code>number</code></td>
+<td><code>5000</code></td>
+<td>Default notification duration (ms)</td>
+</tr>
+<tr>
+<td><code>Config.NotificationPosition</code></td>
+<td><code>string</code></td>
+<td><code>'top-right'</code></td>
+<td>Notification position</td>
+</tr>
+<tr>
+<td><code>Config.ProgressBarDuration</code></td>
+<td><code>number</code></td>
+<td><code>10000</code></td>
+<td>Default progress bar duration (ms)</td>
+</tr>
+<tr>
+<td><code>Config.ProgressBarPosition</code></td>
+<td><code>string</code></td>
+<td><code>'bottom'</code></td>
+<td>Progress bar position</td>
+</tr>
+<tr>
+<td><code>Config.SkillCheckDuration</code></td>
+<td><code>number</code></td>
+<td><code>5000</code></td>
+<td>Default skill check duration (ms)</td>
+</tr>
+<tr>
+<td><code>Config.SkillCheckDifficulty</code></td>
+<td><code>string</code></td>
+<td><code>'easy'</code></td>
+<td>Default skill check difficulty</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="faq-troubleshooting">❓ FAQ / Troubleshooting</h2>
+<h4 id="missing-dependencies">Missing Dependencies</h4>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Behavior</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oxmysql not found</strong></td>
+<td>Database functions disabled, warnings logged</td>
+<td>Install oxmysql</td>
+</tr>
+<tr>
+<td><strong>ox_inventory not found</strong></td>
+<td>Inventory functions disabled, warnings logged</td>
+<td>Install ox_inventory</td>
+</tr>
+<tr>
+<td><strong>ox_lib not found</strong></td>
+<td>Falls back to core notifications</td>
+<td>Install ox_lib or use core notifications</td>
+</tr>
+</tbody>
+</table>
+<h4 id="framework-detection">Framework Detection</h4>
+<ul>
+<li><strong>Auto-detection</strong> checks running <code>qb-core</code> or <code>esx</code> resources.</li>
+<li><strong>Manual override</strong>: set <code>Config.Core = 'qb-core'</code> or <code>'esx'</code>.</li>
+<li><strong>No framework</strong>: functions return safe defaults and warn.</li>
+</ul>
+<h4 id="common-issues">Common Issues</h4>
+<table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Cause</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Player functions not working</strong></td>
+<td>Framework not started</td>
+<td>Ensure QBCore/ESX is running</td>
+</tr>
+<tr>
+<td><strong>Database errors</strong></td>
+<td>oxmysql not configured</td>
+<td>Check oxmysql connection</td>
+</tr>
+<tr>
+<td><strong>Vehicle spawning fails</strong></td>
+<td>Invalid model name</td>
+<td>Verify vehicle model exists</td>
+</tr>
+<tr>
+<td><strong>Notifications not showing</strong></td>
+<td>ox_lib not installed</td>
+<td>Use core notifications or install ox_lib</td>
+</tr>
+</tbody>
+</table>
+<h4 id="performance-notes">Performance Notes</h4>
+<ul>
+<li>✅ DB functions are await-style (non-blocking)</li>
+<li>✅ Vehicle data cached on server start</li>
+<li>✅ Logger respects level settings</li>
+<li>✅ Graceful fallbacks for missing dependencies</li>
+</ul>
+<hr />
+<h2 id="complete-examples">📚 Complete Examples</h2>
+<h4 id="basic-resource-example">Basic Resource Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">-- client.lua</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="c1">-- Get B1 object (recommended approach)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">B1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">getB1Object</span><span class="p">()</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">onPlayerSpawn</span><span class="p">()</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">playerData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">getPlayerData</span><span class="p">()</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">playerData</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">        </span><span class="nv">B1</span><span class="p">.</span><span class="nf">notify</span><span class="p">(</span><span class="s1">&#39;Welcome back, &#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="nv">playerData</span><span class="p">.</span><span class="py">charinfo</span><span class="p">.</span><span class="py">firstname</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">    </span><span class="kr">end</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="kr">end</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="nf">RegisterNetEvent</span><span class="p">(</span><span class="s1">&#39;QBCore:Client:OnPlayerLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">onPlayerSpawn</span><span class="p">)</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="nf">RegisterNetEvent</span><span class="p">(</span><span class="s1">&#39;esx:playerLoaded&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">onPlayerSpawn</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1">-- server.lua</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1">-- Get B1 object (recommended approach)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">B1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">getB1Object</span><span class="p">()</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">giveReward</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="nv">amount</span><span class="p">)</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="nf">addMoney</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bank&#39;</span><span class="p">,</span><span class="w"> </span><span class="nv">amount</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Daily reward&#39;</span><span class="p">)</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">success</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">        </span><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Gave reward to player&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="nv">amount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">amount</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">    </span><span class="kr">end</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="kr">end</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="nf">RegisterCommand</span><span class="p">(</span><span class="s1">&#39;reward&#39;</span><span class="p">,</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">amount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">tonumber</span><span class="p">(</span><span class="nv">args</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="mi">1000</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">    </span><span class="nf">giveReward</span><span class="p">(</span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="nv">amount</span><span class="p">)</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="kr">end</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="advanced-orm-example">Advanced ORM Example</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1">-- server.lua</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1">-- Get B1 object (recommended approach)</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kd">local</span><span class="w"> </span><span class="nv">B1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">exports</span><span class="p">[</span><span class="s1">&#39;b1-lib&#39;</span><span class="p">]:</span><span class="nf">getB1Object</span><span class="p">()</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="kd">local</span><span class="w"> </span><span class="nv">Players</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">B1</span><span class="p">.</span><span class="py">orm</span><span class="p">.</span><span class="nf">define</span><span class="p">(</span><span class="s1">&#39;players&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1">-- Create player record</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">createPlayer</span><span class="p">(</span><span class="nv">citizenId</span><span class="p">,</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="nv">job</span><span class="p">)</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">Players</span><span class="p">:</span><span class="nf">insert</span><span class="p">({</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">        </span><span class="nv">citizenid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">citizenId</span><span class="p">,</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">        </span><span class="nv">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">        </span><span class="nv">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">job</span><span class="p">,</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">        </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">        </span><span class="nv">created_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">os.time</span><span class="p">()</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="kr">end</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="c1">-- Update player level</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="kd">local</span><span class="w"> </span><span class="kr">function</span><span class="w"> </span><span class="nf">levelUpPlayer</span><span class="p">(</span><span class="nv">citizenId</span><span class="p">)</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">    </span><span class="kd">local</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Players</span><span class="p">:</span><span class="nf">findAll</span><span class="p">(</span><span class="s1">&#39;citizenid = ?&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nv">citizenId</span><span class="p">})[</span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">    </span><span class="kr">if</span><span class="w"> </span><span class="nv">player</span><span class="w"> </span><span class="kr">then</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">        </span><span class="nv">player</span><span class="p">.</span><span class="py">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">player</span><span class="p">.</span><span class="py">level</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">        </span><span class="nv">player</span><span class="p">:</span><span class="nf">save</span><span class="p">()</span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">        </span><span class="nv">B1</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s1">&#39;info&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Player leveled up&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nv">citizenId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">citizenId</span><span class="p">,</span><span class="w"> </span><span class="nv">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">player</span><span class="p">.</span><span class="py">level</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a><span class="w">    </span><span class="kr">end</span>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a><span class="kr">end</span>
+</code></pre></div>
+<hr />
+<h2 id="summary">🎯 Summary</h2>
+<p>B1-lib provides a <strong>clean, normalized API</strong> that works with both QBCore and ESX frameworks, making it easy to write <strong>framework-agnostic code</strong>. With comprehensive logging, database ORM, and graceful fallbacks, it's the perfect library for modern FiveM development.</p>
+<p><strong>Key Features</strong></p>
+<ul>
+<li>🔄 <strong>Framework Agnostic</strong> — QBCore and ESX</li>
+<li>🗄️ <strong>Lightweight ORM</strong> — 4DaysORM-inspired DB layer</li>
+<li>📝 <strong>Advanced Logging</strong> — Colored output + traceback</li>
+<li>🎨 <strong>Unified UI System</strong> — Notifications / progress / skill checks</li>
+<li>🚗 <strong>Vehicle Management</strong> — Spawn, plate, labels</li>
+<li>👤 <strong>Player Functions</strong> — Normalized data + money ops</li>
+<li>🎒 <strong>Inventory Integration</strong> — ox_inventory helpers</li>
+<li>⚡ <strong>Performance</strong> — Await-style, non-blocking</li>
+<li>🔧 <strong>Simple Config</strong> — <code>Config.[value] =</code> format</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2024 <a href="https://github.com/Burn-One-Studios"  target="_blank" rel="noopener">Burn-One-Studios</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Burn-One-Studios" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M202.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M496 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/burnone" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.path", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

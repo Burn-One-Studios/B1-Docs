@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://docs.burnonestudios.com/</loc>
+         <lastmod>2025-09-04</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.burnonestudios.com/FiveM-Resources/B1-Lib/Documention/</loc>
+         <lastmod>2025-09-04</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.burnonestudios.com/FiveM-Resources/B1-skillz/Installation%20Guide/</loc>
+         <lastmod>2025-09-04</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.burnonestudios.com/FiveM-Resources/B1-skillz/Client/CheckSkill/</loc>
+         <lastmod>2025-09-04</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.burnonestudios.com/FiveM-Resources/B1-skillz/Client/GetCurrentSkill/</loc>
+         <lastmod>2025-09-04</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.burnonestudios.com/FiveM-Resources/B1-skillz/Client/UpdateSkill/</loc>
+         <lastmod>2025-09-04</lastmod>
+    </url>
+</urlset>
