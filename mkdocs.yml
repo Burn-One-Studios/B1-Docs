@@ -82,6 +82,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - FiveM Resources:
+    - B1-Lib:
+      - FiveM-Resources/B1-Lib/Documention.md
     - B1-Skillz:
       - FiveM-Resources/B1-skillz/Installation Guide.md
       - Client:
